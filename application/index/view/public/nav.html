@@ -1,0 +1,41 @@
+<!-- 顶部导航 start -->
+<div class="topnav">
+    <div class="topnav_bd w1210 bc">
+        <div class="topnav_left">
+
+        </div>
+        <div class="topnav_right fr">
+            <ul>
+                {empty name="$Think.session.user"}
+                <li>您好，欢迎来到京西！[<a href="{:url('user/login')}">登录</a>] [<a href="{:url('user/regist')}">免费注册</a>] </li>
+                {else/}
+                <li>{$Think.session.user.username}您好，欢迎来到京西！[<a href="{:url('user/logout')}">退出</a>] <input type="button" id="sign" value="签到"> </li>
+                {/empty}
+
+                <li class="line">|</li>
+                <li><a href="{:url('index/order/index')}">我的订单</a></li>
+                <li class="line">|</li>
+                <li>客户服务</li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('#sign').click(function (){
+            $.ajax({
+                url:"{:url('member/sign')}",
+                type:'post',
+                success:function(res){
+                    if(res.code==0){
+                        $('#sign').attr('disabled',true);
+                        alert('签到成功');
+                    }else{
+                        alert(res.msg);
+                    }
+                }
+            })
+        })
+    })
+</script>
