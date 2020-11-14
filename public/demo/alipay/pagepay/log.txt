@@ -1,0 +1,15 @@
+<form id='alipaysubmit' name='alipaysubmit' action='https://openapi.alipaydev.com/gateway.do?charset=UTF-8' method='POST'>
+<input type='hidden' name='biz_content' value='{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"1111"}'/>
+<input type='hidden' name='app_id' value='2016101500691006'/>
+<input type='hidden' name='version' value='1.0'/>
+<input type='hidden' name='format' value='json'/>
+<input type='hidden' name='sign_type' value='RSA2'/>
+<input type='hidden' name='method' value='alipay.trade.page.pay'/>
+<input type='hidden' name='timestamp' value='2020-11-09 08:22:07'/>
+<input type='hidden' name='alipay_sdk' value='alipay-sdk-php-20161101'/>
+<input type='hidden' name='notify_url' value='http://shop.com/demo/alipay/notify_url.php'/>
+<input type='hidden' name='return_url' value='http://shop.com/demo/alipay/return_url.php'/>
+<input type='hidden' name='charset' value='UTF-8'/>
+<input type='hidden' name='sign' value='iYeB5MP/N38/LFwjJkzvBs0Gtf+EWI7WGEIKhfFrX2WWjA8PKnMcR1k8LGV6lX4e1rE4ff9+729vPZ2yGvMKBUtOVsx34BnxzOxNT6/t3NOaPbf/QlKsVfICjn/PIyoPoS9kPj44bQ7FRooJSd/rjzvw0Wk0oWKxANF3wO5e/FWVq7nHw4RUtZ22sIDsDvKFi9Ym0X9OtZw1pQgCbweX22x7dv1oI5O24zSXDRynd2QpgX2IaRsjDahpQERkVT1VxU3ebMNcT/9gCB16oTGrshf/JvzEGGjN6Ok/tAZS/MO+lxahRQ1K6iC7BGJKCqC+VANisawtMSZ2uqAw2ZXOjA=='/>
+<input type='submit' value='ok' style='display:none;''>
+</form><script>document.forms['alipaysubmit'].submit();</script>
